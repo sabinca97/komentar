@@ -4,14 +4,14 @@ kumuluzee:
     name: dev
   version: 1.0.0
   server:
-    base-url: http://localhost:8080
+    base-url: http://localhost:8082
     http:
-      port: 8080
+      port: 8082
   datasources:
-    - jndi-name: jdbc/vdjkikowgtbsmb
-      connection-url: jdbc:postgresql://ec2-52-1-95-247.compute-1.amazonaws.com/d8gnrm64ecchtp
-      username: vdjkikowgtbsmb
-      password: 90c2a354319c666def2d0e862c1d558df0a4919d7d4fd4753e95642899343dbc
+    - jndi-name: jdbc/d7ud5c83c09tb0
+      connection-url: jdbc:postgresql://ec2-34-233-186-251.compute-1.amazonaws.com/d7ud5c83c09tb0
+      username: jtcmiipmqjgedq
+      password: a91603371e4c60c1a0f314bd97c0cf99c7be7725b278a0ab7afa3b270f36a349
       listen_addresses: "*"
       pool:
         max-size: 5
@@ -19,7 +19,7 @@ kumuluzee:
     checks:
       data-source-health-check:
         type: liveness
-        jndi-name: jdbc/vdjkikowgtbsmb
+        jndi-name: jdbc/d7ud5c83c09tb0
 
   metrics:
     logstash:

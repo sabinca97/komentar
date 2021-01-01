@@ -62,10 +62,7 @@
             <artifactId>kumuluzee-discovery-consul</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk-rekognition</artifactId>
-        </dependency>
+
 
         <dependency>
             <groupId>org.json</groupId>

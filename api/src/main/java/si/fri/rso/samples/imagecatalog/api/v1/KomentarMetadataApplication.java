@@ -11,6 +11,6 @@ import javax.ws.rs.core.Application;
 
 @ApplicationPath("/v1")
 @CrossOrigin
-public class ImageMetadataApplication extends Application {
+public class KomentarMetadataApplication extends Application {
 
 }
