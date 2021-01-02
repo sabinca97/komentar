@@ -13,7 +13,7 @@ spec:
         app: komentar
     spec:
       containers:
-      - image: sabinca97/novaslika:2
+      - image: sabinca97/komentar:2
         name: komentar
         imagePullPolicy: Always
         env:
