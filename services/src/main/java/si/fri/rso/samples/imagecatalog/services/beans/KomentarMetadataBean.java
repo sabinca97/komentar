@@ -82,6 +82,15 @@ public class KomentarMetadataBean {
     }
 
 
+    public List<KomentarMetadata> getKomentarMetadataByImageId(Integer image_id) {
+
+        List<KomentarMetadataEntity> resultList = em.createNamedQuery("KomentarMetadataEntity.getbyImageId", KomentarMetadataEntity.class)
+                .setParameter("image_id", image_id)
+                .getResultList();
+
+        return resultList.stream().map(KomentarMetadataConverter::toDto).collect(Collectors.toList());
+
+    }
 
     public boolean deleteImageMetadata(Integer id) {
 

@@ -8,7 +8,13 @@ import java.time.Instant;
 @NamedQueries(value =
         {
                 @NamedQuery(name = "ImageMetadataEntity.getAll",
-                        query = "SELECT im FROM KomentarMetadataEntity im")
+                        query = "SELECT im FROM KomentarMetadataEntity im"),
+
+                @NamedQuery(
+                        name = "KomentarMetadataEntity.getbyImageId",
+                        query = "Select im from KomentarMetadataEntity im where im.image_id = :image_id"
+                )
+
         })
 public class KomentarMetadataEntity {
 
@@ -20,8 +26,7 @@ public class KomentarMetadataEntity {
     private String vsebina;
 
     @Column(name = "image_id")
-    private String image_id;
-
+    private Integer image_id;
 
     public Integer getId() {
         return id;
@@ -39,11 +44,11 @@ public class KomentarMetadataEntity {
         this.vsebina = vsebina;
     }
 
-    public String getImage_id() {
+    public Integer getImage_id() {
         return image_id;
     }
 
-    public void setImage_id(String image_id) {
+    public void setImage_id(Integer image_id) {
         this.image_id = image_id;
     }
 }

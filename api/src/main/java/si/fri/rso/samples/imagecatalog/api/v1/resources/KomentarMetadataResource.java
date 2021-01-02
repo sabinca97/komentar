@@ -56,6 +56,19 @@ public class KomentarMetadataResource {
         return Response.status(Response.Status.OK).entity(komentarMetadata).build();
     }
 
+    @GET
+    @Path("/byImage/{imageId}")
+    public Response getImageMetadataByUserId(@PathParam("imageId") Integer imageId) {
+
+        List<KomentarMetadata> komentarMetadataList = komentarMetadataBean.getKomentarMetadataByImageId(imageId);
+
+        if (komentarMetadataList == null) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+
+        return Response.status(Response.Status.OK).entity(komentarMetadataList).build();
+    }
+
     @POST
     public Response createKomentarMetadata(KomentarMetadata komentarMetadata) {
 

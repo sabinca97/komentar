@@ -6,7 +6,7 @@ public class KomentarMetadata {
 
     private Integer id;
     private String vsebina;
-    private String image_id;
+    private Integer image_id;
 
     public Integer getId() {
         return id;
@@ -24,11 +24,11 @@ public class KomentarMetadata {
         this.vsebina = vsebina;
     }
 
-    public String getImage_id() {
+    public Integer getImage_id() {
         return image_id;
     }
 
-    public void setImage_id(String image_id) {
+    public void setImage_id(Integer image_id) {
         this.image_id = image_id;
     }
 }
