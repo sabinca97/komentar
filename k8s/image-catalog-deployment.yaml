@@ -18,11 +18,11 @@ spec:
         imagePullPolicy: Always
         env:
         - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
-          value: jdbc:postgresql://ec2-52-1-95-247.compute-1.amazonaws.com:5432/d8gnrm64ecchtp
+          value: jdbc:postgresql://ec2-34-233-186-251.compute-1.amazonaws.com:5432/d7ud5c83c09tb0
         - name: KUMULUZEE_DATASOURCES0_USERNAME
-          value: vdjkikowgtbsmb
+          value: jtcmiipmqjgedq
         - name: KUMULUZEE_DATASOURCES0_PASSWORD
-          value: 90c2a354319c666def2d0e862c1d558df0a4919d7d4fd4753e95642899343dbc
+          value: a91603371e4c60c1a0f314bd97c0cf99c7be7725b278a0ab7afa3b270f36a349
         ports:
         - containerPort: 8080
           name: server
