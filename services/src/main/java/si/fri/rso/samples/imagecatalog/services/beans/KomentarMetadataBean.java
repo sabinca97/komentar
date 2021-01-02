@@ -61,24 +61,24 @@ public class KomentarMetadataBean {
         return komentarMetadata;
     }
 
-    public KomentarMetadata createImageMetadata(KomentarMetadata komentarMetadata) {
+    public KomentarMetadata createKomentarMetadata(KomentarMetadata komentarMetadata) {
 
-        KomentarMetadataEntity imageMetadataEntity = KomentarMetadataConverter.toEntity(komentarMetadata);
+        KomentarMetadataEntity komentarMetadataEntity = KomentarMetadataConverter.toEntity(komentarMetadata);
 
         try {
             beginTx();
-            em.persist(imageMetadataEntity);
+            em.persist(komentarMetadataEntity);
             commitTx();
         }
         catch (Exception e) {
             rollbackTx();
         }
 
-        if (imageMetadataEntity.getId() == null) {
+        if (komentarMetadataEntity.getId() == null) {
             throw new RuntimeException("Entity was not persisted");
         }
 
-        return KomentarMetadataConverter.toDto(imageMetadataEntity);
+        return KomentarMetadataConverter.toDto(komentarMetadataEntity);
     }
 
 

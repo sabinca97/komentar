@@ -76,7 +76,7 @@ public class KomentarMetadataResource {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
         else {
-            komentarMetadata = komentarMetadataBean.createImageMetadata(komentarMetadata);
+            komentarMetadata = komentarMetadataBean.createKomentarMetadata(komentarMetadata);
         }
 
         return Response.status(Response.Status.OK).entity(komentarMetadata).build();
